@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Donate Form</title>
+    <link rel="stylesheet" href="donate.css"> <!-- Link to external CSS -->
+    <style>
+        .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+        .token-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .token-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="login.html" class="back-button">&larr; Back</a>
+  
+    <!-- Form Container -->
+    <div class="form-container">
+        <header>
+            <h1>Donate Form</h1>
+        </header>
+        <form id="donate-form" action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="restaurant-name" placeholder="Restaurant Name" required>
+                <input type="text" name="restaurant-address" placeholder="Restaurant Address" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="type-of-food" placeholder="Type of Food" required>
+                <input type="number" name="quantity" placeholder="Quantity" required>
+            </div>
+            <div class="form-group">
+                <input type="date" name="current-date" required>
+            </div>
+            <button type="submit">Donate Now</button>
+        </form>
+        <div class="thank-you-message" id="thank-you-message">
+            Thank you for donating!
+        </div>
+        <!-- New Token Page Button -->
+        <a href="token.html" class="token-button">View Token Page</a>
+    </div>
+
+    <script>
+        // JavaScript to show the thank you message after form submission
+        document.getElementById('donate-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show the thank you message
+            document.getElementById('thank-you-message').style.display = 'block';
+
+            // Optionally, reset the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
+

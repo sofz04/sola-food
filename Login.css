@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+/* Body styling with a full-page background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('sola.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login form container */
+.login-container {
+  background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  text-align: center;
+  width: 300px; /* Fixed width for the form */
+}
+
+/* Heading styling */
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Input fields styling */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styling */
+.login-container button {
+  background: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Button hover effect */
+.login-container button:hover {
+  background: #0056b3; /* Darker blue on hover */
+}

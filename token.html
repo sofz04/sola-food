@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Token Integration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Solana Token Dashboard</h1>
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="walletAddress"></div>
+        <div id="balance"></div>
+        <button id="getBalance">Token Balance</button>
+        <!-- Back Button -->
+        <button id="backButton" onclick="window.location.href='donate.html'">Back</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js"></script>
+    <script src="token.js"></script>
+</body>
+
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('sola.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#walletAddress, #balance {
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+    word-wrap: break-word;
+    text-align: left;
+}
+</style>
+
+
